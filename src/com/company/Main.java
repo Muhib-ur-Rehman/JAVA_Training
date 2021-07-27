@@ -69,5 +69,11 @@ public class Main {
         for (int i=0; i<csDepStd.size();i++){
             System.out.println("Student name: "+csDepStd.get(i).name +" , Department Name: "+csDepStd.get(i).dept);
         }
+
+        // Task 4: Abstract class and interface. (difference) interface mulitple inheritance (if both interfaces method same then
+        // what is the behaviour, abstract class and interface)
+        // Answer: in both cases if a class is implementing 2 interfaces or 1 interface and 1 abstract class with same method then if
+        // the return type is same it will implement that method but if return type is not same it will give error.
+
     }
 }
