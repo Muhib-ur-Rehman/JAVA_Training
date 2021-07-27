@@ -1,4 +1,4 @@
-package com.company;
+package com.company.encapsulation;
 
 public class student {
     private String name;
