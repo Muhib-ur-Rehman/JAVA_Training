@@ -1,9 +1,13 @@
 package com.company;
 
+import com.company.composition.book;
+import com.company.composition.library;
 import com.company.encapsulation.student;
 import com.company.inheritance.cat;
 import com.company.inheritance.dog;
 import com.company.singleton.singleton;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -32,5 +36,18 @@ public class Main {
         cat c1 = new cat();
         c1.eat();
         c1.meow();
+
+        //Task 3.2: Compose a class with composition
+        book b1 = new book("War or Peace",1200);
+        book b2 = new book("Mr Perfect",1500);
+        book b3 = new book("Global warming",2000);
+        ArrayList<book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(b1);
+        listOfBooks.add(b2);
+        listOfBooks.add(b3);
+        library l1 = new library(listOfBooks);
+        for (int i =0 ; i<l1.list.size(); i++){
+            System.out.println("Name : "+l1.list.get(i).name + " and price : "+l1.list.get(i).price);
+        }
     }
 }
