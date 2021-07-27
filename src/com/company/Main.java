@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.aggregation.department;
+import com.company.aggregation.std;
 import com.company.composition.book;
 import com.company.composition.library;
 import com.company.encapsulation.student;
@@ -48,6 +50,24 @@ public class Main {
         library l1 = new library(listOfBooks);
         for (int i =0 ; i<l1.list.size(); i++){
             System.out.println("Name : "+l1.list.get(i).name + " and price : "+l1.list.get(i).price);
+        }
+
+        //Task 3.3: Compose a class with aggregation
+        std st1 =new std("Hassan","CS");
+        std st2 =new std("Ahmed","CS");
+        std st3 =new std("Nasir","maths");
+        std st4 =new std("Saad","maths");
+        ArrayList<std> listOfCS = new ArrayList<>();
+        listOfCS.add(st1);
+        listOfCS.add(st2);
+        ArrayList<std> listOfMaths = new ArrayList<>();
+        listOfMaths.add(st3);
+        listOfMaths.add(st4);
+        department CSdep = new department("CS",listOfCS);
+        department mathsDep = new department("maths",listOfMaths);
+        ArrayList<std> csDepStd = CSdep.showStudents();
+        for (int i=0; i<csDepStd.size();i++){
+            System.out.println("Student name: "+csDepStd.get(i).name +" , Department Name: "+csDepStd.get(i).dept);
         }
     }
 }
