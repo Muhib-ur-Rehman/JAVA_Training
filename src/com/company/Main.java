@@ -1,6 +1,8 @@
 package com.company;
 
 import com.company.encapsulation.student;
+import com.company.inheritance.cat;
+import com.company.inheritance.dog;
 import com.company.singleton.singleton;
 
 public class Main {
@@ -22,5 +24,13 @@ public class Main {
         if (obj1==obj2){
             System.out.println("sameeee");
         }
+
+        //Task 3.1: Create an example of inheritance
+        dog d1 = new dog();
+        d1.eat();
+        d1.bark();
+        cat c1 = new cat();
+        c1.eat();
+        c1.meow();
     }
 }
