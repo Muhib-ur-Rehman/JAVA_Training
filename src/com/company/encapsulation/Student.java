@@ -1,6 +1,6 @@
 package com.company.encapsulation;
 
-public class student {
+public class Student {
     private String name;
     private int rollNo;
     private  String sex;
@@ -38,14 +38,14 @@ public class student {
         this.age = age;
     }
 
-    public student(){
+    public Student(){
         this.sex=null;
         this.age=0;
         this.name=null;
         this.rollNo=0;
     }
 
-    public student(String name,int rollNo,String sex,int age){
+    public Student(String name,int rollNo,String sex,int age){
         this.name=name;
         this.rollNo=rollNo;
         this.age=age;

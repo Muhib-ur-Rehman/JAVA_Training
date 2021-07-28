@@ -1,5 +1,5 @@
 package com.company.interfaceAbstractDiff;
 
-public interface interface2 {
+public interface Interface1 {
     public void help();
 }

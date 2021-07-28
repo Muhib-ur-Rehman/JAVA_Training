@@ -1,10 +1,10 @@
 package com.company.aggregation;
 
-public class std {
+public class DepartmentStudent {
     public String name;
     public String dept;
 
-    public std(String name, String dept){
+    public DepartmentStudent(String name, String dept){
         this.name=name;
         this.dept=dept;
     }
