@@ -10,12 +10,16 @@ import com.company.inheritance.Dog;
 import com.company.singleton.Singleton;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Main {
+
 
     public static void main(String[] args) {
 
         // Task 1: Using encapsulation write a program in java that encapsulates Student's information (name, roll no etc)
+        System.out.println("Result of Encapsulation Task :");
         Student s1 = new Student("Ali",2,"Male",12);
         System.out.println(s1.toString());
 
@@ -23,15 +27,17 @@ public class Main {
         //The program should only make One object and upon creating another object, it should return the same object.
         // Also confirm this behaviour by prinitng the object. Another way to determine same object is the ""=="" operator,
         // it should return `true` if you have same object in both references.
+        System.out.println("\nResult of SingleTon Task :");
         Singleton obj1 = Singleton.makeObj();
         Singleton obj2 = Singleton.makeObj();
         System.out.println("Object 1 = "+obj1);
         System.out.println("Object 2 = "+obj2);
         if (obj1==obj2){
-            System.out.println("sameeee");
+            System.out.println("Samee....");
         }
 
         //Task 3.1: Create an example of inheritance
+        System.out.println("\nResult of Inheritance Task :");
         Dog d1 = new Dog();
         d1.eat();
         d1.bark();
@@ -40,6 +46,7 @@ public class Main {
         c1.meow();
 
         //Task 3.2: Compose a class with composition
+        System.out.println("\nResult of Composition Task :");
         Book b1 = new Book("War or Peace",1200);
         Book b2 = new Book("Mr Perfect",1500);
         Book b3 = new Book("Global warming",2000);
@@ -53,6 +60,7 @@ public class Main {
         }
 
         //Task 3.3: Compose a class with aggregation
+        System.out.println("\nResult of Aggregation Task :");
         DepartmentStudent st1 =new DepartmentStudent("Hassan","CS");
         DepartmentStudent st2 =new DepartmentStudent("Ahmed","CS");
         DepartmentStudent st3 =new DepartmentStudent("Nasir","maths");
