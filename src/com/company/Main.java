@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.aggregation.Department;
 import com.company.aggregation.DepartmentStudent;
+import com.company.compileTimePolymorphisim.Shapes;
 import com.company.composition.Book;
 import com.company.composition.Library;
 import com.company.encapsulation.Student;
@@ -10,6 +11,7 @@ import com.company.inheritance.Dog;
 import com.company.singleton.Singleton;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -80,8 +82,45 @@ public class Main {
 
         // Task 4: Abstract class and interface. (difference) interface mulitple inheritance (if both interfaces method same then
         // what is the behaviour, abstract class and interface)
-        // Answer: in both cases if a class is implementing 2 interfaces or 1 interface and 1 abstract class with same method then if
+        // Answer: In both cases if a class is implementing 2 interfaces or 1 interface and 1 abstract class with same method then if
         // the return type is same it will implement that method but if return type is not same it will give error.
 
+        // Tasks of abstraction and polymorphisim
+        // "Task 1: Write a program in java that computes the areas of Circle, Triangle and Rectangle using Compile-Time polymorphism.
+        //   HINT: You can Use only one method name for calculating area of all the shapes - e.g:""calculateArea()""
+        //   Limitations: Inheritance is not allowed.
+
+        Scanner sc = new Scanner(System.in);
+        Shapes shapes = new Shapes();
+        System.out.println("Select shape of which you want to calculate area: ");
+        System.out.println("1. Circle");
+        System.out.println("2. Triangle");
+        System.out.println("3. Rectangle");
+        int choice = sc.nextInt();
+        float area=0.0f;
+        switch (choice){
+            case 1:
+                System.out.println("Enter radius ?");
+                int radius=sc.nextInt();
+                area=shapes.calculateArea(3.14f,radius);
+                break;
+            case 2:
+                System.out.println("Enter base ?");
+                int base = sc.nextInt();
+                System.out.println("Enter height ?");
+                int height = sc.nextInt();
+                area=shapes.calculateArea(0.5f,base,height);
+                break;
+            case 3:
+                System.out.println("Enter Length ?");
+                int length = sc.nextInt();
+                System.out.println("Enter breath ?");
+                int breath = sc.nextInt();
+                area=shapes.calculateArea(length,breath);
+                break;
+            default:
+                System.out.println("Wrong selection of choice");
+        }
+        System.out.println("Area is -> "+area);
     }
 }
