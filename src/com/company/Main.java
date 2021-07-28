@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.abstraction.Employee;
 import com.company.aggregation.Department;
 import com.company.aggregation.DepartmentStudent;
 import com.company.composition.Book;
@@ -75,5 +76,12 @@ public class Main {
         // Answer: in both cases if a class is implementing 2 interfaces or 1 interface and 1 abstract class with same method then if
         // the return type is same it will implement that method but if return type is not same it will give error.
 
+        // Task 3: Write a program in java to implement abstraction, the program should have two classes ""Person"" and ""Employee""
+        // but it should not expose the details of ""Person"" class by using Abstraction.
+        System.out.println("\nResult of abstraction :");
+        Employee e1 = new Employee("Ali","North karachi","Programming",50000);
+        e1.getHobby();
+        e1.getIncome();
+        System.out.println(e1.printPerson());
     }
 }
