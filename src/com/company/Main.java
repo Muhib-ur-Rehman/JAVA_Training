@@ -1,13 +1,13 @@
 package com.company;
 
-import com.company.aggregation.department;
-import com.company.aggregation.std;
-import com.company.composition.book;
-import com.company.composition.library;
-import com.company.encapsulation.student;
-import com.company.inheritance.cat;
-import com.company.inheritance.dog;
-import com.company.singleton.singleton;
+import com.company.aggregation.Department;
+import com.company.aggregation.DepartmentStudent;
+import com.company.composition.Book;
+import com.company.composition.Library;
+import com.company.encapsulation.Student;
+import com.company.inheritance.Cat;
+import com.company.inheritance.Dog;
+import com.company.singleton.Singleton;
 
 import java.util.ArrayList;
 
@@ -16,15 +16,15 @@ public class Main {
     public static void main(String[] args) {
 
         // Task 1: Using encapsulation write a program in java that encapsulates Student's information (name, roll no etc)
-        student s1 = new student("Ali",2,"Male",12);
+        Student s1 = new Student("Ali",2,"Male",12);
         System.out.println(s1.toString());
 
         // Task 2: Write a program in java that implements Singleton design pattern.
         //The program should only make One object and upon creating another object, it should return the same object.
         // Also confirm this behaviour by prinitng the object. Another way to determine same object is the ""=="" operator,
         // it should return `true` if you have same object in both references.
-        singleton obj1 = singleton.makeObj();
-        singleton obj2 = singleton.makeObj();
+        Singleton obj1 = Singleton.makeObj();
+        Singleton obj2 = Singleton.makeObj();
         System.out.println("Object 1 = "+obj1);
         System.out.println("Object 2 = "+obj2);
         if (obj1==obj2){
@@ -32,42 +32,42 @@ public class Main {
         }
 
         //Task 3.1: Create an example of inheritance
-        dog d1 = new dog();
+        Dog d1 = new Dog();
         d1.eat();
         d1.bark();
-        cat c1 = new cat();
+        Cat c1 = new Cat();
         c1.eat();
         c1.meow();
 
         //Task 3.2: Compose a class with composition
-        book b1 = new book("War or Peace",1200);
-        book b2 = new book("Mr Perfect",1500);
-        book b3 = new book("Global warming",2000);
-        ArrayList<book> listOfBooks = new ArrayList<>();
+        Book b1 = new Book("War or Peace",1200);
+        Book b2 = new Book("Mr Perfect",1500);
+        Book b3 = new Book("Global warming",2000);
+        ArrayList<Book> listOfBooks = new ArrayList<>();
         listOfBooks.add(b1);
         listOfBooks.add(b2);
         listOfBooks.add(b3);
-        library l1 = new library(listOfBooks);
+        Library l1 = new Library(listOfBooks);
         for (int i =0 ; i<l1.list.size(); i++){
             System.out.println("Name : "+l1.list.get(i).name + " and price : "+l1.list.get(i).price);
         }
 
         //Task 3.3: Compose a class with aggregation
-        std st1 =new std("Hassan","CS");
-        std st2 =new std("Ahmed","CS");
-        std st3 =new std("Nasir","maths");
-        std st4 =new std("Saad","maths");
-        ArrayList<std> listOfCS = new ArrayList<>();
+        DepartmentStudent st1 =new DepartmentStudent("Hassan","CS");
+        DepartmentStudent st2 =new DepartmentStudent("Ahmed","CS");
+        DepartmentStudent st3 =new DepartmentStudent("Nasir","maths");
+        DepartmentStudent st4 =new DepartmentStudent("Saad","maths");
+        ArrayList<DepartmentStudent> listOfCS = new ArrayList<>();
         listOfCS.add(st1);
         listOfCS.add(st2);
-        ArrayList<std> listOfMaths = new ArrayList<>();
+        ArrayList<DepartmentStudent> listOfMaths = new ArrayList<>();
         listOfMaths.add(st3);
         listOfMaths.add(st4);
-        department CSdep = new department("CS",listOfCS);
-        department mathsDep = new department("maths",listOfMaths);
-        ArrayList<std> csDepStd = CSdep.showStudents();
-        for (int i=0; i<csDepStd.size();i++){
-            System.out.println("Student name: "+csDepStd.get(i).name +" , Department Name: "+csDepStd.get(i).dept);
+        Department CSdep = new Department("CS",listOfCS);
+        Department mathsDep = new Department("maths",listOfMaths);
+        ArrayList<DepartmentStudent> csDepDepartmentStudent = CSdep.showStudents();
+        for (int i=0; i<csDepDepartmentStudent.size();i++){
+            System.out.println("Student name: "+csDepDepartmentStudent.get(i).name +" , Department Name: "+csDepDepartmentStudent.get(i).dept);
         }
 
         // Task 4: Abstract class and interface. (difference) interface mulitple inheritance (if both interfaces method same then
