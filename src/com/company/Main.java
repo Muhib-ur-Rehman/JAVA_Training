@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.abstraction.Employee;
 import com.company.aggregation.Department;
 import com.company.aggregation.DepartmentStudent;
 import com.company.compileTimePolymorphisim.Shapes;
@@ -122,5 +123,12 @@ public class Main {
                 System.out.println("Wrong selection of choice");
         }
         System.out.println("Area is -> "+area);
+        // Task 3: Write a program in java to implement abstraction, the program should have two classes ""Person"" and ""Employee""
+        // but it should not expose the details of ""Person"" class by using Abstraction.
+        System.out.println("\nResult of abstraction :");
+        Employee e1 = new Employee("Ali","North karachi","Programming",50000);
+        e1.getHobby();
+        e1.getIncome();
+        System.out.println(e1.printPerson());
     }
 }
