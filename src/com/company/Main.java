@@ -9,6 +9,7 @@ import com.company.composition.Library;
 import com.company.encapsulation.Student;
 import com.company.inheritance.Cat;
 import com.company.inheritance.Dog;
+import com.company.multipleInheritance.Developer;
 import com.company.runTimePolymorphisim.Circle;
 import com.company.runTimePolymorphisim.Rectangle;
 import com.company.runTimePolymorphisim.Shapes1;
@@ -132,41 +133,42 @@ public class Main {
         //   HINT: 1. You can Use only one method name for calculating area of all the shapes - e.g:""calculateArea()"".
         //   2. Inheritance is allowed.
 
-        Scanner sc = new Scanner(System.in);
-        Shapes1 shapes1 = null;
-        System.out.println("Select shape of which you want to calculate area: ");
-        System.out.println("1. Circle");
-        System.out.println("2. Triangle");
-        System.out.println("3. Rectangle");
-        int choice = sc.nextInt();
-        float area=0.0f;
-        switch (choice){
-            case 1:
-                System.out.println("Enter radius ?");
-                int radius=sc.nextInt();
-                shapes1= new Circle();
-                area=shapes1.calculateArea(3.14f,radius);
-                break;
-            case 2:
-                System.out.println("Enter base ?");
-                int base = sc.nextInt();
-                System.out.println("Enter height ?");
-                int height = sc.nextInt();
-                shapes1=new Triangle();
-                area=shapes1.calculateArea(0.5f,base,height);
-                break;
-            case 3:
-                System.out.println("Enter Length ?");
-                int length = sc.nextInt();
-                System.out.println("Enter breath ?");
-                int breath = sc.nextInt();
-                shapes1=new Rectangle();
-                area=shapes1.calculateArea(length,breath);
-                break;
-            default:
-                System.out.println("Wrong selection of choice");
-        }
-        System.out.println("Area is -> "+area);
+//        Scanner sc = new Scanner(System.in);
+//        Shapes1 shapes1 = null;
+//        System.out.println("Select shape of which you want to calculate area: ");
+//        System.out.println("1. Circle");
+//        System.out.println("2. Triangle");
+//        System.out.println("3. Rectangle");
+//        int choice = sc.nextInt();
+//        float area=0.0f;
+//        switch (choice){
+//            case 1:
+//                System.out.println("Enter radius ?");
+//                int radius=sc.nextInt();
+//                shapes1= new Circle();
+//                area=shapes1.calculateArea(3.14f,radius);
+//                break;
+//            case 2:
+//                System.out.println("Enter base ?");
+//                int base = sc.nextInt();
+//                System.out.println("Enter height ?");
+//                int height = sc.nextInt();
+//                shapes1=new Triangle();
+//                area=shapes1.calculateArea(0.5f,base,height);
+//                break;
+//            case 3:
+//                System.out.println("Enter Length ?");
+//                int length = sc.nextInt();
+//                System.out.println("Enter breath ?");
+//                int breath = sc.nextInt();
+//                shapes1=new Rectangle();
+//                area=shapes1.calculateArea(length,breath);
+//                break;
+//            default:
+//                System.out.println("Wrong selection of choice");
+//        }
+//        System.out.println("Area is -> "+area);
+
         // Task 3: Write a program in java to implement abstraction, the program should have two classes ""Person"" and ""Employee""
         // but it should not expose the details of ""Person"" class by using Abstraction.
         System.out.println("\nResult of abstraction :");
@@ -174,5 +176,13 @@ public class Main {
         e1.getHobby();
         e1.getIncome();
         System.out.println(e1.printPerson());
+
+        // Task 4: Write a code to achieve multiple inheritance in java.
+        System.out.println("\nResult of Multiple Inheritance:");
+        Developer developer1 = new Developer();
+        System.out.println(developer1.getName());
+        developer1.doFun();
+        developer1.doWork();
+        System.out.println(developer1.getSalary());
     }
 }
