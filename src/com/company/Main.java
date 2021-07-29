@@ -184,5 +184,38 @@ public class Main {
         developer1.doFun();
         developer1.doWork();
         System.out.println(developer1.getSalary());
+
+        // Task of Language Package:
+        // Task 1 : Write a java program to understand the difference between String literal and String Object. Also use ""equals()"" method and
+        // ""=="" operator to compare these Strings.
+
+        System.out.println("\nResults of String Literal vs String Object");
+        String text1 = "",text2 = "";
+        Long start1 = System.currentTimeMillis();
+        for (int i =0;i<100000;i++){
+            text1 = "He is a good boy.";
+        }
+        Long end1 = System.currentTimeMillis();
+        Long finalTime1 = end1 - start1;
+        System.out.println("Time taken by String Literal -> "+finalTime1);
+
+        Long start2 = System.currentTimeMillis();
+        for (int i =0;i<100000;i++){
+            text2 = new String("He is a good boy.");
+        }
+        Long end2 = System.currentTimeMillis();
+        Long finalTime2 = end2 - start2;
+        System.out.println("Time taken by String Object -> "+finalTime2);
+        System.out.println("So the major difference between them is that, String Literal is much more faster then String Object in performance.");
+        if (text1.equals(text2)){
+            System.out.println("equals() method is working.");
+        }else {
+            System.out.println("equals() method is not working.");
+        }
+        if (text1==text2){
+            System.out.println("== operator is working.");
+        }else {
+            System.out.println("== operator is not working.");
+        }
     }
 }
