@@ -5,3 +5,5 @@
 * Composition
 * Aggregation
 * Abstraction and interfaces
+* Compile time polymorphisim
+* Run time polymorphisim
