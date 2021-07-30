@@ -15,6 +15,8 @@ import com.company.runTimePolymorphisim.Rectangle;
 import com.company.runTimePolymorphisim.Shapes1;
 import com.company.runTimePolymorphisim.Triangle;
 import com.company.singleton.Singleton;
+import com.company.upperCase.UpperCase;
+import com.sun.security.jgss.GSSUtil;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -217,5 +219,11 @@ public class Main {
         }else {
             System.out.println("== operator is not working.");
         }
+
+        // Task 4: Write a java program to capitalize each word in string.
+        System.out.println("\n Result of Task Capitalize string.");
+        UpperCase upperCase = new UpperCase();
+        System.out.println(upperCase.toUpperCase("Hello how are you"));
+
     }
 }
