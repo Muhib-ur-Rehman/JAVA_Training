@@ -10,6 +10,7 @@ import com.company.encapsulation.Student;
 import com.company.inheritance.Cat;
 import com.company.inheritance.Dog;
 import com.company.multipleInheritance.Developer;
+import com.company.primeNumber.PrimeNumber;
 import com.company.runTimePolymorphisim.Circle;
 import com.company.runTimePolymorphisim.Rectangle;
 import com.company.runTimePolymorphisim.Shapes1;
@@ -217,5 +218,12 @@ public class Main {
         }else {
             System.out.println("== operator is not working.");
         }
+
+        // Task 5: Write a Java program to count the number of Prime Numbers less than a given positive number.
+        // Hint: To complete the above program, you can also start with a program to find if any given number is prime or not?"
+        System.out.println("\n Result of Task Prime Number.");
+        PrimeNumber primeNumber = new PrimeNumber();
+        System.out.println("Number of Prime numbers are "+primeNumber.checkPrime(12));
     }
+
 }
