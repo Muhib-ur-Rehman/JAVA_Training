@@ -6,6 +6,7 @@ import com.company.aggregation.DepartmentStudent;
 import com.company.compileTimePolymorphisim.Shapes;
 import com.company.composition.Book;
 import com.company.composition.Library;
+import com.company.doCompare.DoCompare;
 import com.company.encapsulation.Student;
 import com.company.inheritance.Cat;
 import com.company.inheritance.Dog;
@@ -224,6 +225,12 @@ public class Main {
         System.out.println("\n Result of task String Builder VS String Buffer");
         StringBuilderVsStringBuffer stringBuilderVsStringBuffer = new StringBuilderVsStringBuffer();
         stringBuilderVsStringBuffer.doCheck();
+
+        // Task 2: Write a java program to compare two Strings using ""compareTo()"" method.
+
+        System.out.println("\nResult of doCompare() method :");
+        DoCompare dc = new DoCompare();
+        System.out.println("Result after comparision is "+dc.doCompare("Hello","Flag"));
 
     }
 
