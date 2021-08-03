@@ -6,6 +6,7 @@ import com.company.aggregation.DepartmentStudent;
 import com.company.compileTimePolymorphisim.Shapes;
 import com.company.composition.Book;
 import com.company.composition.Library;
+import com.company.doCompare.DoCompare;
 import com.company.encapsulation.Student;
 import com.company.inheritance.Cat;
 import com.company.inheritance.Dog;
@@ -17,6 +18,7 @@ import com.company.runTimePolymorphisim.Triangle;
 import com.company.singleton.Singleton;
 import com.company.upperCase.UpperCase;
 import com.sun.security.jgss.GSSUtil;
+import com.company.stringBuilderVsStringBuffer.StringBuilderVsStringBuffer;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -220,10 +222,26 @@ public class Main {
             System.out.println("== operator is not working.");
         }
 
+
         // Task 4: Write a java program to capitalize each word in string.
         System.out.println("\n Result of Task Capitalize string.");
         UpperCase upperCase = new UpperCase();
         System.out.println(upperCase.toUpperCase("Hello how are you"));
 
+        // Task 3: Write a java program to make a String(""Java is an Object Oriented Language"") using ""StringBuffer"" and ""StringBuilder"" and
+        //also traverse through both the Strings and print the traversal time in milliseconds. Also observe which String class is faster than the other.
+        System.out.println("\n Result of task String Builder VS String Buffer");
+        StringBuilderVsStringBuffer stringBuilderVsStringBuffer = new StringBuilderVsStringBuffer();
+        stringBuilderVsStringBuffer.doCheck();
+
+        // Task 2: Write a java program to compare two Strings using ""compareTo()"" method.
+
+        System.out.println("\nResult of doCompare() method :");
+        DoCompare dc = new DoCompare();
+        System.out.println("Result after comparision is "+dc.doCompare("Hello","Flag"));
+
+
     }
+
+
 }
