@@ -16,6 +16,7 @@ import com.company.runTimePolymorphisim.Rectangle;
 import com.company.runTimePolymorphisim.Shapes1;
 import com.company.runTimePolymorphisim.Triangle;
 import com.company.singleton.Singleton;
+import com.company.stringBuilderVsStringBuffer.StringBuilderVsStringBuffer;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -219,6 +220,11 @@ public class Main {
             System.out.println("== operator is not working.");
         }
 
+        // Task 3: Write a java program to make a String(""Java is an Object Oriented Language"") using ""StringBuffer"" and ""StringBuilder"" and
+        //also traverse through both the Strings and print the traversal time in milliseconds. Also observe which String class is faster than the other.
+        System.out.println("\n Result of task String Builder VS String Buffer");
+        StringBuilderVsStringBuffer stringBuilderVsStringBuffer = new StringBuilderVsStringBuffer();
+        stringBuilderVsStringBuffer.doCheck();
 
         // Task 2: Write a java program to compare two Strings using ""compareTo()"" method.
 
@@ -227,4 +233,6 @@ public class Main {
         System.out.println("Result after comparision is "+dc.doCompare("Hello","Flag"));
 
     }
+
+
 }
